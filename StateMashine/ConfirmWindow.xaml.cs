@@ -30,10 +30,6 @@ namespace StateMashine
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
 
         public void ActivateForm()
         {

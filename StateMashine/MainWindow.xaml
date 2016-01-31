@@ -9,7 +9,7 @@
     
         <Canvas Name="Scene1">
             <Button Name="Button1" Content="Activate! " Canvas.Left="44" Canvas.Top="21" Width="160" Height="42" Click="Button1_Click"></Button>
-            <Button Name="Button2" Content="Change Scene" Canvas.Left="302" Canvas.Top="21" Width="160" Height="42" IsEnabled="false"></Button>
+            <Button Name="Button2" Content="Change Scene" Canvas.Left="302" Canvas.Top="21" Width="160" Height="42" IsEnabled="false" Click="Button2_Click"></Button>
         </Canvas>
    
 </Window>

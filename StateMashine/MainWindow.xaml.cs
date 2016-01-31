@@ -39,11 +39,14 @@ namespace StateMashine
             this._state = beginState;
         }
 
-        
-
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
             _state.Activate();
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            _state.ChangeScene();
         }
 
         public void ActivateForm()
@@ -58,13 +61,19 @@ namespace StateMashine
 
         public void ChangeScreen()
         {
-            var confirmWindow = new ConfirmWindow();
-            confirmWindow.Show();
+            var confirm = new ConfirmWindow();
+            confirm.Show();
+            this.Hide();
         }
 
         public IFormsState GetActiveState()
         {
             return activeForm;
+        }
+
+        public IFormsState GetSceneChangedState()
+        {
+            return sceneChanged;
         }
     }
 }

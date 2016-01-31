@@ -48,12 +48,13 @@ namespace StateMashine.States
 
         public void Activate()
         {
-         //   this.window.
+            
         }
 
         public void ChangeScene()
         {
-            
+            (window as IScreenChanger).ChangeScreen();
+            ((IStateMashine)window).SetState(((IActivatingItem)window).GetActiveState());
         }
     }
 
