@@ -1,0 +1,14 @@
+D:\GitHub\StateMashine\StateMashine\bin\Debug\StateMashine.exe.config
+D:\GitHub\StateMashine\StateMashine\bin\Debug\StateMashine.exe
+D:\GitHub\StateMashine\StateMashine\bin\Debug\StateMashine.pdb
+D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.csprojResolveAssemblyReference.cache
+D:\GitHub\StateMashine\StateMashine\obj\Debug\MainWindow.g.cs
+D:\GitHub\StateMashine\StateMashine\obj\Debug\App.g.cs
+D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine_MarkupCompile.cache
+D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine_MarkupCompile.lref
+D:\GitHub\StateMashine\StateMashine\obj\Debug\MainWindow.baml
+D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.g.resources
+D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.Properties.Resources.resources
+D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.csproj.GenerateResource.Cache
+D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.exe
+D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.pdb

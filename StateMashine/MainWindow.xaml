@@ -1,0 +1,15 @@
+﻿<Window x:Class="StateMashine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StateMashine"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="123" Width="525">
+    
+        <Canvas Name="Scene1">
+            <Button Name="Button1" Content="Activate! " Canvas.Left="44" Canvas.Top="21" Width="160" Height="42" Click="Button1_Click"></Button>
+            <Button Name="Button2" Content="Change Scene" Canvas.Left="302" Canvas.Top="21" Width="160" Height="42" IsEnabled="false"></Button>
+        </Canvas>
+   
+</Window>
