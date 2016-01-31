@@ -12,3 +12,5 @@ D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.Properties.Resources.
 D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.csproj.GenerateResource.Cache
 D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.exe
 D:\GitHub\StateMashine\StateMashine\obj\Debug\StateMashine.pdb
+D:\GitHub\StateMashine\StateMashine\obj\Debug\ConfirmWindow.g.cs
+D:\GitHub\StateMashine\StateMashine\obj\Debug\ConfirmWindow.baml

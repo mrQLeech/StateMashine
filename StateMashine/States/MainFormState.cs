@@ -27,7 +27,7 @@ namespace StateMashine.States
         public void Activate()
         {
             (window as IActivatingItem).ActivateForm();
-            (window as IStateMashine).SetState()
+            ((IStateMashine)window ).SetState(((IActivatingItem)window).GetActiveState());
 
 
         }

@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using StateMashine.States;
 using StateMashine.FormsInterfaces;
@@ -18,53 +17,37 @@ using StateMashine.FormsInterfaces;
 namespace StateMashine
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window, IActivatingItem, IStateMashine, IScreenChanger
+    public partial class ConfirmWindow : Window, IActivatingItem, IStateMashine
     {
         public IFormsState beginState;
         public IFormsState activeForm;
         public IFormsState sceneChanged;
 
-        private IFormsState _state;
-        
-        public MainWindow()
+        public ConfirmWindow()
         {
             InitializeComponent();
-
-            beginState = new BeginState(this);
-            activeForm = new ActiveState(this);
-            sceneChanged = new SceneChangedState(this);
-
-            this._state = beginState;
         }
 
-        
-
-        private void Button1_Click(object sender, RoutedEventArgs e)
+        private void InitializeComponent()
         {
-            _state.Activate();
+            throw new NotImplementedException();
         }
 
         public void ActivateForm()
         {
-            this.Button2.IsEnabled = true;
+            throw new NotImplementedException();
         }
 
         public void SetState(IFormsState state)
         {
-            this._state = state;
-        }
-
-        public void ChangeScreen()
-        {
-            var confirmWindow = new ConfirmWindow();
-            confirmWindow.Show();
+            throw new NotImplementedException();
         }
 
         public IFormsState GetActiveState()
         {
-            return activeForm;
+            throw new NotImplementedException();
         }
     }
 }
