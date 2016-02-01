@@ -21,38 +21,88 @@ namespace StateMashine
     /// </summary>
     public partial class ConfirmWindow : Window, IStateMashine, IScreenJumper
     {
-        public IFormsState beginState;
-        public IFormsState activeForm;        
+        private Window _parent; 
 
-        public ConfirmWindow()
+        private IFormsState _resetState;
+        private IFormsState _activeState;
+
+        private IFormsState _state;
+
+        private string resetLabelText = "Hi!";
+        private string activeLabelText = "Thank you";
+
+        public ConfirmWindow(Window parent)
         {
             InitializeComponent();
+            _parent = parent;
+
+            _resetState = new BeginState(this);
+            _activeState = new ActiveState(this);
+
+            _state = _activeState;
         }
         
 
         public void SetState(IFormsState state)
         {
-            throw new NotImplementedException();
+            _state = state;
         }
 
         public void ActivateForm()
         {
-            throw new NotImplementedException();
+            SetJumpButtonEnabled(true);
+            SetLabelTextActivity(true);
+        }
+
+        private void SetJumpButtonEnabled(bool enable)
+        {
+            Button1.IsEnabled = enable;
+        }
+
+        private void SetLabelTextActivity(bool activation)
+        {
+            Label1.Content = activation && !string.IsNullOrEmpty(textBox.Text)? 
+                activeLabelText : resetLabelText;
+        }
+
+        public void DisactivateForm()
+        {
+            SetJumpButtonEnabled(false);
+            SetLabelTextActivity(false);      
         }
 
         public void ChangeScreen()
         {
-            throw new NotImplementedException();
+            _parent.Show();
+            Close();
+        }
+
+        public IFormsState GetResetState()
+        {
+            return _resetState;
         }
 
         public IFormsState GetActiveState()
         {
-            throw new NotImplementedException();
+            return _activeState;
         }
 
-        public IFormsState GetSceneChangedState()
+        private void Button1_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            _state.JumpBetweenScenes();
+        }
+
+        private void textBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            var text = (sender as TextBox).Text;
+            if (text.ToLower() == "hello" || string.IsNullOrEmpty(text))
+            {
+                _state.Activate();
+            }
+            else
+            {
+                _state.Disactivate();
+            }
         }
     }
 }

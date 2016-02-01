@@ -12,7 +12,9 @@ namespace StateMashine.States
     public interface IFormsState
     {
         void Activate();
-        void ChangeScene();
+        void JumpBetweenScenes();
+
+        void Disactivate();
     }
 
     public class BeginState : IFormsState
@@ -29,11 +31,14 @@ namespace StateMashine.States
             var jumper = (window as IScreenJumper);
             jumper.ActivateForm();
             ((IStateMashine)window).SetState(jumper.GetActiveState());
-
-
         }
 
-        public void ChangeScene()
+        public void JumpBetweenScenes()
+        {
+            
+        }
+
+        public void Disactivate()
         {
             
         }
@@ -50,13 +55,20 @@ namespace StateMashine.States
 
         public void Activate()
         {
-            
+          
         }
 
-        public void ChangeScene()
+        public void JumpBetweenScenes()
         {
             var jumper = (window as IScreenJumper);
             jumper.ChangeScreen();
+            ((IStateMashine)window).SetState(jumper.GetResetState());
+        }
+
+        public void Disactivate()
+        {
+            var jumper = (window as IScreenJumper);
+            jumper.DisactivateForm();
             ((IStateMashine)window).SetState(jumper.GetResetState());
         }
     }

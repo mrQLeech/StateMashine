@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 
 namespace StateMashine.FormsInterfaces
 {
-    interface IScreenJumper
+   public interface IScreenJumper
     {
 
-        IFormsState GetResetState();
         void ActivateForm();
-
-        IFormsState GetActiveState();
-
+        void DisactivateForm();
         void ChangeScreen();
 
+        IFormsState GetResetState();
+        IFormsState GetActiveState();
+       
+    }
 
+    public interface IScreenJumperExtended: IScreenJumper
+    {
+        void CheckCondition();
+        IFormsState GetConditionCheckingState();
     }
 }

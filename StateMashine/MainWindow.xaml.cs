@@ -22,9 +22,8 @@ namespace StateMashine
     /// </summary>
     public partial class MainWindow : Window, IStateMashine, IScreenJumper
     {
-        public IFormsState _resetState;
-        public IFormsState _activeState;
-        
+        private IFormsState _resetState;
+        private IFormsState _activeState;
 
         private IFormsState _state;
         
@@ -36,7 +35,7 @@ namespace StateMashine
             _activeState = new ActiveState(this);
             
 
-            this._state = _resetState;
+           _state = _resetState;
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e)
@@ -46,12 +45,12 @@ namespace StateMashine
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
-            _state.ChangeScene();
+            _state.JumpBetweenScenes();
         }
 
         public void SetState(IFormsState state)
         {
-            this._state = state;
+            _state = state;
         }
 
         public void ActivateForm()
@@ -61,14 +60,14 @@ namespace StateMashine
 
         private void SetJumpButtonEnabled(bool enable)
         {
-            this.Button2.IsEnabled = enable;
+            Button2.IsEnabled = enable;
         }
 
         public void ChangeScreen()
         {
-            var confirm = new ConfirmWindow();
+            var confirm = new ConfirmWindow(this);
             confirm.Show();
-            this.Hide();
+            Hide();
 
             SetJumpButtonEnabled(false);            
         }
@@ -81,6 +80,11 @@ namespace StateMashine
         public IFormsState GetActiveState()
         {
             return _activeState;
+        }
+
+        public void DisactivateForm()
+        {
+            _state.Disactivate();
         }
     }
 }
