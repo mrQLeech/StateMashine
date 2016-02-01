@@ -19,7 +19,7 @@ namespace StateMashine
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class ConfirmWindow : Window, IActivatingItem, IStateMashine
+    public partial class ConfirmWindow : Window, IStateMashine, IScreenJumper
     {
         public IFormsState beginState;
         public IFormsState activeForm;
@@ -29,19 +29,29 @@ namespace StateMashine
         {
             InitializeComponent();
         }
-
-
-        public void ActivateForm()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public void SetState(IFormsState state)
         {
             throw new NotImplementedException();
         }
 
+        public void ActivateForm()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ChangeScreen()
+        {
+            throw new NotImplementedException();
+        }
+
         public IFormsState GetActiveState()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IFormsState GetSceneChangedState()
         {
             throw new NotImplementedException();
         }

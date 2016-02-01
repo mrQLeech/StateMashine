@@ -20,7 +20,7 @@ namespace StateMashine
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, IActivatingItem, IStateMashine, IScreenJumper
+    public partial class MainWindow : Window, IStateMashine, IScreenJumper
     {
         public IFormsState beginState;
         public IFormsState activeForm;

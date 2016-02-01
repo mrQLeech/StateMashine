@@ -17,9 +17,15 @@ D:\GitHub\StateMashine\StateMashine\obj\Debug\ConfirmWindow.baml
 D:\temp\q\GitRepo\StateMashine\StateMashine\bin\Debug\StateMashine.exe.config
 D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\StateMashine.exe
 D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\StateMashine.pdb
-D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\StateMashine.csprojResolveAssemblyReference.cache
 D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\MainWindow.g.cs
 D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\ConfirmWindow.g.cs
 D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\App.g.cs
 D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\StateMashine_MarkupCompile.cache
 D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\StateMashine_MarkupCompile.lref
+D:\temp\q\GitRepo\StateMashine\StateMashine\bin\Debug\StateMashine.exe
+D:\temp\q\GitRepo\StateMashine\StateMashine\bin\Debug\StateMashine.pdb
+D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\MainWindow.baml
+D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\ConfirmWindow.baml
+D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\StateMashine.g.resources
+D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\StateMashine.Properties.Resources.resources
+D:\temp\q\GitRepo\StateMashine\StateMashine\obj\Debug\StateMashine.csproj.GenerateResource.Cache

@@ -26,14 +26,16 @@ namespace StateMashine.States
 
         public void Activate()
         {
-            (window as IActivatingItem).ActivateForm();
-            ((IStateMashine)window ).SetState(((IActivatingItem)window).GetActiveState());
+            var jumper = (window as IScreenJumper);
+            jumper.ActivateForm();
+            ((IStateMashine)window).SetState(jumper.GetActiveState());
 
 
         }
 
         public void ChangeScene()
         {
+            
         }
     }
 
@@ -53,8 +55,9 @@ namespace StateMashine.States
 
         public void ChangeScene()
         {
-            (window as IScreenJumper).ChangeScreen();
-            ((IStateMashine)window).SetState(((IActivatingItem)window).GetActiveState());
+            var jumper = (window as IScreenJumper);
+            jumper.ChangeScreen();
+            ((IStateMashine)window).SetState(jumper.GetActiveState());
         }
     }
 
