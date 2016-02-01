@@ -53,7 +53,7 @@ namespace StateMashine.States
 
         public void ChangeScene()
         {
-            (window as IScreenChanger).ChangeScreen();
+            (window as IScreenJumper).ChangeScreen();
             ((IStateMashine)window).SetState(((IActivatingItem)window).GetActiveState());
         }
     }
