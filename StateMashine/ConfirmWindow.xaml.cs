@@ -22,8 +22,7 @@ namespace StateMashine
     public partial class ConfirmWindow : Window, IStateMashine, IScreenJumper
     {
         public IFormsState beginState;
-        public IFormsState activeForm;
-        public IFormsState sceneChanged;
+        public IFormsState activeForm;        
 
         public ConfirmWindow()
         {

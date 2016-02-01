@@ -22,9 +22,9 @@ namespace StateMashine
     /// </summary>
     public partial class MainWindow : Window, IStateMashine, IScreenJumper
     {
-        public IFormsState beginState;
-        public IFormsState activeForm;
-        public IFormsState sceneChanged;
+        public IFormsState _resetState;
+        public IFormsState _activeState;
+        
 
         private IFormsState _state;
         
@@ -32,11 +32,11 @@ namespace StateMashine
         {
             InitializeComponent();
 
-            beginState = new BeginState(this);
-            activeForm = new ActiveState(this);
-            sceneChanged = new SceneChangedState(this);
+            _resetState = new BeginState(this);
+            _activeState = new ActiveState(this);
+            
 
-            this._state = beginState;
+            this._state = _resetState;
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e)
@@ -49,14 +49,19 @@ namespace StateMashine
             _state.ChangeScene();
         }
 
-        public void ActivateForm()
-        {
-            this.Button2.IsEnabled = true;
-        }
-
         public void SetState(IFormsState state)
         {
             this._state = state;
+        }
+
+        public void ActivateForm()
+        {
+            SetJumpButtonEnabled(true);
+        }
+
+        private void SetJumpButtonEnabled(bool enable)
+        {
+            this.Button2.IsEnabled = enable;
         }
 
         public void ChangeScreen()
@@ -64,16 +69,18 @@ namespace StateMashine
             var confirm = new ConfirmWindow();
             confirm.Show();
             this.Hide();
+
+            SetJumpButtonEnabled(false);            
+        }
+        
+        public IFormsState GetResetState()
+        {
+            return _resetState;
         }
 
         public IFormsState GetActiveState()
         {
-            return activeForm;
-        }
-
-        public IFormsState GetSceneChangedState()
-        {
-            return sceneChanged;
+            return _activeState;
         }
     }
 }

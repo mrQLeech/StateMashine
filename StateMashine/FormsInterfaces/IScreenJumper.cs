@@ -10,12 +10,13 @@ namespace StateMashine.FormsInterfaces
     interface IScreenJumper
     {
 
+        IFormsState GetResetState();
         void ActivateForm();
+
         IFormsState GetActiveState();
 
         void ChangeScreen();
 
-        IFormsState GetSceneChangedState();
 
     }
 }

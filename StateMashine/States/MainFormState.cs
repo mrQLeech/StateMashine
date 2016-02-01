@@ -57,27 +57,7 @@ namespace StateMashine.States
         {
             var jumper = (window as IScreenJumper);
             jumper.ChangeScreen();
-            ((IStateMashine)window).SetState(jumper.GetActiveState());
-        }
-    }
-
-    public class SceneChangedState : IFormsState
-    {
-        Window window;
-
-        public SceneChangedState(Window window)
-        {
-            this.window = window;
-        }
-
-        public void Activate()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ChangeScene()
-        {
-            throw new NotImplementedException();
+            ((IStateMashine)window).SetState(jumper.GetResetState());
         }
     }
 }
