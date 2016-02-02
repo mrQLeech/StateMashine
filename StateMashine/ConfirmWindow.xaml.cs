@@ -104,5 +104,30 @@ namespace StateMashine
                 _state.Disactivate();
             }
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!_parent.IsVisible)
+            {
+
+                var res = MessageBox.Show(this, "You want to close the application?", "Closing", MessageBoxButton.YesNoCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
+                if (res == MessageBoxResult.Cancel){
+                    e.Cancel = true;
+                    return;
+                }
+                else 
+                {
+                    if (res == MessageBoxResult.Yes)
+                    {
+                        _parent.Close();
+                        return;
+                    }
+                }
+                _parent.Show();
+            }
+        }
+
+
+      
     }
 }

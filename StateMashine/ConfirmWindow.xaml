@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StateMashine"
         mc:Ignorable="d"
-        Title="ConfirmWindow" Height="112.75" Width="270" WindowStyle="ToolWindow">
-    <Canvas>
-        <Label x:Name="Label1" Content="Hi!" Canvas.Left="10" Canvas.Top="11" RenderTransformOrigin="2.28,0.538" Width="83" Height="35"/>
+        Title="ConfirmWindow" Height="112" Width="289" WindowStyle="ToolWindow" MinHeight="112" MaxHeight="112" MinWidth="289" MaxWidth="289" Closing="Window_Closing">
+    <Canvas Margin="0,0,-15,0">
+        <Label x:Name="Label1" Content="Hi!" Canvas.Left="14" Canvas.Top="11" RenderTransformOrigin="2.28,0.538" Width="83" Height="35"/>
         <TextBox x:Name="textBox" Height="23" Canvas.Left="98" TextWrapping="Wrap" Canvas.Top="13" Width="154" KeyUp="textBox_KeyUp"/>
         <Button x:Name="Button1" Content="Welcome!" Canvas.Left="19" Canvas.Top="51" Width="233" IsEnabled="True" Click="Button1_Click"/>
 
