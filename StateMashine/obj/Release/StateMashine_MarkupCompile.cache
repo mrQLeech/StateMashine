@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\GitHub\StateMashine\StateMashine\obj\Debug\
+D:\GitHub\StateMashine\StateMashine\obj\Release\
 StateMashine
 none
 false
-DEBUG;TRACE
+TRACE
 D:\GitHub\StateMashine\StateMashine\App.xaml
 21975423602
 
-13-1054698901
+91711679981
 13-1142990016
 MainWindow.xaml;ConfirmWindow.xaml;
 
-True
+False
 

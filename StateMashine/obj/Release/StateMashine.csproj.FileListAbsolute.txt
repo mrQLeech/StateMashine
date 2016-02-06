@@ -1,0 +1,16 @@
+D:\GitHub\StateMashine\StateMashine\bin\Release\StateMashine.exe.config
+D:\GitHub\StateMashine\StateMashine\bin\Release\StateMashine.exe
+D:\GitHub\StateMashine\StateMashine\bin\Release\StateMashine.pdb
+D:\GitHub\StateMashine\StateMashine\obj\Release\StateMashine.csprojResolveAssemblyReference.cache
+D:\GitHub\StateMashine\StateMashine\obj\Release\MainWindow.g.cs
+D:\GitHub\StateMashine\StateMashine\obj\Release\ConfirmWindow.g.cs
+D:\GitHub\StateMashine\StateMashine\obj\Release\App.g.cs
+D:\GitHub\StateMashine\StateMashine\obj\Release\StateMashine_MarkupCompile.cache
+D:\GitHub\StateMashine\StateMashine\obj\Release\StateMashine_MarkupCompile.lref
+D:\GitHub\StateMashine\StateMashine\obj\Release\MainWindow.baml
+D:\GitHub\StateMashine\StateMashine\obj\Release\ConfirmWindow.baml
+D:\GitHub\StateMashine\StateMashine\obj\Release\StateMashine.g.resources
+D:\GitHub\StateMashine\StateMashine\obj\Release\StateMashine.Properties.Resources.resources
+D:\GitHub\StateMashine\StateMashine\obj\Release\StateMashine.csproj.GenerateResource.Cache
+D:\GitHub\StateMashine\StateMashine\obj\Release\StateMashine.exe
+D:\GitHub\StateMashine\StateMashine\obj\Release\StateMashine.pdb
